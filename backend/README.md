@@ -19,3 +19,19 @@ Este módulo contiene el **backend de SmartRetail IA**, encargado de:
 -   **OpenAI API** – IA avanzada para predicción.
 -   **PyJWT** – Autenticación basada en tokens.
 -   **Docker** – Contenedores para despliegue.
+
+## 🧩 Arquitectura del Módulo
+
+El backend está organizado siguiendo una estructura modular para mantener el código limpio y escalable:
+
+-   /api/ – Endpoints REST divididos por recursos (auth, usuarios, predicción, inventario…).
+
+-   /services/ – Lógica de negocio independiente de los controladores.
+
+-   /models/ – Esquemas de datos, tanto ORM como validación con Pydantic.
+
+-   /ml/ – Scripts y modelos de predicción entrenables, pipelines y utilidades.
+
+-   /database/ – Conexiones, migraciones y configuración del ORM.
+
+-   /utils/ – Funciones auxiliares (logs, emails, hashing, validaciones…).
